@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+
+char sortstring(char str[4]){
+    char temp=0;
+    for(int i=0;i<5;i++){
+        for(int j=0;j<5;j++){
+            if (str[i]<str[j]){
+                temp=str[i];
+                str[i]=str[j];
+                str[j]=temp;
+            }
+        }
+    }
+    return str[4];
+}
+int main(){
+    char str1[4]="date";
+    char str2[4]="ated";
+    sortstring(str1);
+    sortstring(str2);
+    if(strcmp(str1,str2)==0){
+        printf("noth strings are anagrams");
+        
+    }
+    else{
+        printf("both strings are not anagrams");
+        
+    }
+    return 0;
+    
+}
