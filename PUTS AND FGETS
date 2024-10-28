@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    char batch1[15];
+    printf("enter ur name");
+    fgets(batch1,sizeof (batch1),stdin);
+    puts(batch1);
+    
+}
