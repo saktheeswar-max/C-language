@@ -1,0 +1,10 @@
+for(int i;i<5;i++){
+    for(int j=i+1;j<5;j++){
+        if(str1[i]<str1[j]){
+            temp=str1[i];
+            str1[i]=str[j];
+            str1[j]=temp;
+            
+        }
+    }
+}
