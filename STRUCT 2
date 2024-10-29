@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct mark {
+    int sub1;
+    int sub2;
+    int sub3;
+};
+
+struct sist {
+    char Name[20];
+    int Regno;
+    struct mark m1; // Use m1 to access the marks
+};
+
+int main() {
+    struct sist s[3]; // Declare an array for 3 students
+
+    for(int i = 0; i < 3; i++) { // Loop for 3 students
+        printf("Enter the name of student %d: ", i + 1);
+        scanf("%s", s[i].Name); // Correct usage, no & needed for arrays
+
+        printf("Enter the Regno of student %d: ", i + 1);
+        scanf("%d", &s[i].Regno);
+
+        printf("Enter the marks for subject 1: ");
+        scanf("%d", &s[i].m1.sub1); // Corrected to use %d for integers
+
+        printf("Enter the marks for subject 2: ");
+        scanf("%d", &s[i].m1.sub2); // Corrected to use %d for integers
+
+        printf("Enter the marks for subject 3: ");
+        scanf("%d", &s[i].m1.sub3); // Corrected to use %d for integers
+    }
+
+    // Optional: Displaying the entered data
+    printf("\nStudent Details:\n");
+    for(int i = 0; i < 3; i++) {
+        printf("Name: %s, Regno: %d, Marks: %d, %d, %d\n", 
+               s[i].Name, s[i].Regno, s[i].m1.sub1, s[i].m1.sub2, s[i].m1.sub3);
+    }
+
+    return 0;
+}
