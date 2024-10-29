@@ -1,0 +1,44 @@
+#include<stdio.h>
+
+struct mark
+{
+    int sub1;
+    int sub2;
+    int sub3;
+    
+}m1;
+struct sist
+{
+    char Name[20];
+    int Regno;
+    struct mark m1;
+    
+}s[3];
+int main()
+{
+    
+    struct sist s[3];
+    for (int i = 0; i < 3; i++) {
+        printf("Enter the name of student %d: ", i + 1);
+        scanf("%s", s[i].Name); 
+
+        printf("Enter the Regno of student %d: ", i + 1);
+        scanf("%d", &s[i].Regno);
+
+        printf("Enter the marks for subject 1: ");
+        scanf("%d", &s[i].m1.sub1); 
+
+        printf("Enter the marks for subject 2: ");
+        scanf("%d", &s[i].m1.sub2);
+
+        printf("Enter the marks for subject 3: ");
+        scanf("%d", &s[i].m1.sub3);
+       
+       
+   }
+   for (int i = 0; i < 3; i++) {
+        float total = s[i].m1.sub1 + s[i].m1.sub2 + s[i].m1.sub3; 
+        printf("Total marks for %s (Regno: %d): %.1f\n", s[i].Name, s[i].Regno, total);
+    }
+    return 0;
+}
