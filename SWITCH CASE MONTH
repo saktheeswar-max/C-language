@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main() 
+{
+    int month;
+    printf("enter the month");
+    scanf("%d",&month);
+    int year;
+    printf("enter the year:");
+    scanf("%d",&year);
+    if(month<1||month>12){
+        printf("enter the month is invalid");
+    }
+    
+    switch(month){
+        case 1:
+            printf("days=31");
+            break;
+        case 3:
+            printf("days=31");
+            break;
+        case 5:
+            printf("days=31");
+            break;
+        case 7:
+            printf("days=31");
+            break;
+        case 9:
+            printf("days=31");
+            break;
+        case 11:
+            printf("days=31");
+            break;
+        case 4:
+            printf("days=30");
+            break;
+        case 6:
+            printf("days=30");
+            break;
+        case 8:
+            printf("days=30");
+            break;
+        case 10:
+            printf("days=30");
+            break;
+         case 12:
+            printf("days=30");
+            break;
+        case 2:
+              if((year%4==0 && year%100!=0)||(year%100==0 && year%400==0)){
+        printf("%d it is an leap year\n",year);
+        printf("days=29");
+        
+         }
+              else
+            {
+        printf("%d it is not an leap year\n",year);
+        printf("days=28");
+            }
+            break;
+    }
+    
+}
+    
